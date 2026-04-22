@@ -126,10 +126,34 @@
 :root[data-theme="dark"] .eyebrow,
 :root[data-theme="dark"] .section-eyebrow,
 :root[data-theme="dark"] .service-tag,
+:root[data-theme="dark"] .mono,
 :root[data-theme="dark"] .nav-list a:hover,
 :root[data-theme="dark"] .btn-ghost:hover,
 :root[data-theme="dark"] a,
 :root[data-theme="dark"] .form-success {
+  color: var(--accent);
+}
+
+/* Footer in dark: blend with body, no bright green band */
+:root[data-theme="dark"] .site-footer {
+  background: var(--bg-alt);
+  color: var(--ink-2);
+  border-top: 1px solid var(--line);
+}
+
+:root[data-theme="dark"] .footer-brand {
+  color: var(--ink);
+}
+
+:root[data-theme="dark"] .footer-meta {
+  color: var(--ink-3);
+}
+
+:root[data-theme="dark"] .footer-links a {
+  color: var(--ink-2);
+}
+
+:root[data-theme="dark"] .footer-links a:hover {
   color: var(--accent);
 }
 
@@ -186,9 +210,27 @@
   :root:not([data-theme="light"]) .eyebrow,
   :root:not([data-theme="light"]) .section-eyebrow,
   :root:not([data-theme="light"]) .service-tag,
+  :root:not([data-theme="light"]) .mono,
   :root:not([data-theme="light"]) .nav-list a:hover,
   :root:not([data-theme="light"]) a,
   :root:not([data-theme="light"]) .form-success {
+    color: var(--accent);
+  }
+  :root:not([data-theme="light"]) .site-footer {
+    background: var(--bg-alt);
+    color: var(--ink-2);
+    border-top: 1px solid var(--line);
+  }
+  :root:not([data-theme="light"]) .footer-brand {
+    color: var(--ink);
+  }
+  :root:not([data-theme="light"]) .footer-meta {
+    color: var(--ink-3);
+  }
+  :root:not([data-theme="light"]) .footer-links a {
+    color: var(--ink-2);
+  }
+  :root:not([data-theme="light"]) .footer-links a:hover {
     color: var(--accent);
   }
   :root:not([data-theme="light"]) .btn-primary {
