@@ -420,25 +420,29 @@ a:hover {
   border-color: var(--green-200);
 }
 
-.theme-toggle .icon-sun,
+/* Default (light): show moon, hide sun */
+.theme-toggle .icon-sun {
+  display: none !important;
+}
 .theme-toggle .icon-moon {
-  display: none;
+  display: block !important;
 }
 
+/* Explicit dark: show sun, hide moon */
 :root[data-theme="dark"] .theme-toggle .icon-sun {
-  display: block;
+  display: block !important;
+}
+:root[data-theme="dark"] .theme-toggle .icon-moon {
+  display: none !important;
 }
 
-:root:not([data-theme="dark"]) .theme-toggle .icon-moon {
-  display: block;
-}
-
+/* OS dark + no explicit user choice: show sun, hide moon */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) .theme-toggle .icon-sun {
-    display: block;
+    display: block !important;
   }
   :root:not([data-theme="light"]) .theme-toggle .icon-moon {
-    display: none;
+    display: none !important;
   }
 }
 
